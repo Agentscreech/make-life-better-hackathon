@@ -42,7 +42,7 @@ app.get('/profile', isLoggedIn, function(req, res) {
       where: {
         id: req.user.id
       },
-      include: [db.car]
+      include: [db.child, db.chore]
     }).then(function(user){
       res.render('profile',{user:user});
     });
