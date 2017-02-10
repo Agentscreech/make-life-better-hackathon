@@ -37,13 +37,14 @@ router.get('/loginChild', function(req, res) {
   res.render('auth/loginChild');
 });
 
-router.post('/loginChild', passport.authenticate('local', {
-  successRedirect: '/child',
+router.post('/loginChild', passport.authenticate('user', {
+  successRedirect: '/user',
   failureRedirect: '/auth/loginChild',
   successFlash: 'Logged In!',
   failureFlash: 'Invalid username and/or password'
 }));
-router.post('/loginParent', passport.authenticate('local', {
+
+router.post('/loginParent', passport.authenticate('admin', {
   successRedirect: '/admin',
   failureRedirect: '/auth/loginParent',
   successFlash: 'Logged In!',

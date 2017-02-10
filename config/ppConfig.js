@@ -12,11 +12,28 @@ passport.deserializeUser(function(id, callback) {
   }).catch(callback);
 });
 
-passport.use(new LocalStrategy({
+passport.use('admin', new LocalStrategy({
   usernameField: 'email',
   passwordField: 'password'
 }, function(email, password, callback) {
   db.user.find({
+    where: {
+      email: email
+    }
+  }).then(function(user) {
+    if(!user || !user.validPassword(password)) {
+      callback(null, false);
+    } else {
+      callback(null, user);
+    }
+  }).catch(callback);
+}));
+
+passport.use('user', new LocalStrategy({
+  usernameField: 'email',
+  passwordField: 'password'
+}, function(email, password, callback) {
+  db.child.find({
     where: {
       email: email
     }
