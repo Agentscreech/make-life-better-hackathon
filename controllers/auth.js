@@ -17,7 +17,7 @@ router.post('/signup', function(req, res) {
   }).spread(function(user, created) {
     if(created) {
       passport.authenticate('local', {
-        successRedirect: '/profile',
+        successRedirect: '/admin',
         successFlash: 'Account created and logged in'
       })(req, res);
     } else {
@@ -44,7 +44,7 @@ router.post('/loginChild', passport.authenticate('local', {
   failureFlash: 'Invalid username and/or password'
 }));
 router.post('/loginParent', passport.authenticate('local', {
-  successRedirect: '/parent',
+  successRedirect: '/admin',
   failureRedirect: '/auth/loginParent',
   successFlash: 'Logged In!',
   failureFlash: 'Invalid username and/or password'

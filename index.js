@@ -37,32 +37,10 @@ app.get('/', function(req, res) {
   res.render('index');
 });
 
-app.get('/profile', isLoggedIn, function(req, res) {
-    db.user.find({
-      where: {
-        id: req.user.id
-      },
-      include: [db.child, db.chore]
-    }).then(function(user){
-      console.log('user return', user);
-      if (user){
-        res.render('parent',{user:user});
-      } else {
-        db.child.find({
-          where: {
-            id: req.user.id
-          },
-          include: [db.chore]
-        }).then(function(child){
-          res.render('child', {child:child});
-        });
-      }
-    });
-
-});
 
 app.use('/auth', require('./controllers/auth'));
-app.use('/parent', require('./controllers/parent'));
+app.use('/admin', require('./controllers/admin'));
+app.use('/user', require('./controllers/user'));
 
 app.get('/admin', function  (req,res) {
   res.render('admin');
