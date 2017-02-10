@@ -6,6 +6,9 @@ body{
 h2{
 	margin:  0 auto;
 }
+div{
+	border:  1px solid black;
+}
 /* INDEX */
 .landingLogin{
 	margin: o auto;
@@ -26,17 +29,19 @@ h2{
 
 /* PARENT VIEW*/
 .addChore{
-	display: inline-block;
-	border:  1px solid lightgrey;
-	margin: 20px;
-	padding: 10px;
-	border-radius: 25px;
+			background: lightblue;
+			border-radius: 10px;
+	margin-top: 40px;
 }
 .addChore div{
-	margin: 10px;
+
+		margin: 5px;
 }
 .form-group{
 	display: inline-block;
+}
+.formText{
+	height: 72px;
 }
 #authName{
 	width: 80%;

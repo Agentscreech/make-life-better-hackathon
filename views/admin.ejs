@@ -1,6 +1,65 @@
 <h2>Parent View</h2>
 
 <div class="addChore">
+	<form action='admin/chore/new' method="POST">
+		<div class="form-group col-md-6 col-xs-12">
+			<label for="name"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Whats the chore?</label>
+			<input id="name" class="formItem formText form-control" type="text" name="name">
+		</div>
+		<div class="col-md-5">
+		<div class="form-group">
+			<label for="childId" value="0"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> Which child?
+			<select class="formItem" name='childId'>
+				<option></option>
+				<option value="0">Floyd</option>
+				<option value="2">Ezikiel</option>
+				<option value="3">Chalupa</option>
+			</select>
+			</label>
+		</div>
+		<div class="form-group">
+			<label for="dueDate"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> When is it due?</label>
+			<input class="formItem" type="date" name="dueDate">
+		</div>
+		<div class="form-group">
+			<label for="value"><i class="fa fa-unlock-alt fa-lg" aria-hidden="true"></i> How much is it worth?</label>
+			<input class="formItem" type="number" name="value">
+		</div>
+		</div>
+		<input class="btn btn-primary choreSubmit" type="submit" value="Add Chore">
+		<input type="hidden" name="isDone" value="false">
+		<input type="hidden" name="approved" value="false">
+		<input type="hidden" name="userId" value="<%=user.id%>">
+
+
+	</form>
+</div>
+<div class="toDo"><h3>Chores:</h3>
+	<div class="chore">
+		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Rake Yard </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$5</span>
+		<input type="button" class="btn btn-success col-xs-3 col-xs-offset-5 " value=" Unfinished ">
+	</div>
+	<div class="chore">
+		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Dishes </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$2</span>
+		<input type="button" class="btn btn-success col-xs-3 col-xs-offset-5 " value=" Unfinished ">
+	</div>
+	<div class="chore">
+		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Clean Room </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$4</span>
+		<input type="button" class="btn btn-success col-xs-3 col-xs-offset-5 " value=" Unfinished ">
+	</div>
+	</div>
+	<div class="done"><h3>Done:</h3>
+	<div class="chore">
+		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Walk Dog </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$5</span>
+		<input type="button" class="btn btn-defautl disabled col-xs-3 col-xs-offset-5 " value=" Approve ">
+	</div>
+	<div class="chore finished">
+		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Paint Barn </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$10</span>
+		<input type="button" class="btn btn-primary disabled col-xs-3 col-xs-offset-5 " value=" Done! ">
+	</div>
+	</div>
+
+<div class="addChore">
 	<form class="" action="admin/child/new" method="POST">
 		<div class="form-group" style='width:90%'>
 			<label for="name"><i class="fa fa-user fa-lg"></i>Child's name
@@ -30,58 +89,4 @@
 		<input type="hidden" name="userId" value="<%=user.id%>">
 		<input class="btn btn-primary childSubmit" type="submit" value="Add Child">
 	</form>
-</div>
-
-
-
-<div class="addChore">
-	<form action='admin/chore/new' method="POST">
-		<div class="form-group" style="width:90%">
-			<label for="name"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Whats the chore?</label>
-			<input id="name" class="form-control" type="text" name="name">
-		</div>
-		<div class="form-group">
-			<label for="childId" value="0"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> Which child?
-			<select name='childId'>
-				<option value="0">Floyd</option>
-				<option value="2">Ezikiel</option>
-				<option value="3">Chalupa</option>
-			</select>
-			<label>
-		</div>
-		<div class="form-group">
-			<label for="dueDate"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> When is it due?</label>
-			<input type="date" name="dueDate">
-		</div>
-		<div class="form-group">
-			<label for="value"><i class="fa fa-unlock-alt fa-lg" aria-hidden="true"></i> How much is it worth?</label>
-			<input type="number" name="value">
-		</div>
-		<input class="btn btn-primary choreSubmit" type="submit" value="Add Chore">
-		<input type="hidden" name="isDone" value="false">
-		<input type="hidden" name="approved" value="false">
-		<input type="hidden" name="userId" value="<%=user.id%>">
-
-
-	</form>
-</div>
-<div class="choreList">
-	<div class="chore">
-		<p><span class="col-md-4"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Rake Yard </span><span class="col-md-1">$5</span><span class="col-md-1">Floyd</span>
-		<span class="choreComplete"><input type="checkbox" name="vehicle" value="Bike">Completed</span></p>
-	</div>
-	<div class="chore">
-		<p><span class="col-md-4"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Sweep Kitchen </span><span class="col-md-1">$1</span><span class="col-md-1">Chalupa</span>
-		<span class="choreComplete"><input type="checkbox" name="vehicle" value="Bike">Completed</span></p>
-	</div>
-	<div class="chore">
-		<p><span class="col-md-4"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Eliminate Neighbor </span><span class="col-md-1">$10</span><span class="col-md-1">Floyd</span>
-		<span class="choreComplete"><input type="checkbox" name="vehicle" value="Bike">Completed</span></p>
-	</div>
-</div>
-<div class="kidList">
-	Kids
-	<div class=addKid>
-		Add Kid
-	</div>
 </div>
