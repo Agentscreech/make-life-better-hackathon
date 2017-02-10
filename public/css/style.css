@@ -5,14 +5,12 @@ body{
 }
 h2{
 	margin:  0 auto;
+	padding-bottom: 20px;
 }
-div{
-	border:  1px solid black;
-}
+
 /* INDEX */
 .landingLogin{
 	margin: o auto;
-	width: 33%;
 	border: 1px solid lightgrey;
 	border-radius: 25px;
 	padding: 10px;
@@ -125,7 +123,7 @@ div{
 		margin: 5px;
 }
 .btn{
-	font-size: 120%;
+	font-size: 100%;
 	font-weight: 500;
 }
 .finished{
