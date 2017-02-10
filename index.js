@@ -40,7 +40,7 @@ app.get('/', function(req, res) {
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/admin', require('./controllers/admin'));
-app.use('/user', require('./controllers/user'));
+// app.use('/user', require('./controllers/user'));
 
 app.get('/admin', function  (req,res) {
   res.render('admin');

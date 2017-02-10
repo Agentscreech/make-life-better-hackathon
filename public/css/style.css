@@ -56,3 +56,6 @@ body{
 .choreComplete{
 		right: 10px;
 }
+.fa-trash-o{
+	color: green;
+}
