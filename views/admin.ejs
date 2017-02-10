@@ -1,0 +1,46 @@
+<h2>Parent View</h2>
+<div class="addChore">
+	<form action="/auth/signup" method="POST">
+		<div class="form-group" style="width:90%">
+			<label for="authName"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Whats the chore?</label>
+			<input id="authName" class="form-control" type="text" name="name">
+		</div>
+		<div class="form-group">
+			<label for="authEmail"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> Which child?</label>
+			<select>
+				<option value="Floyd">Floyd</option>
+				<option value="Ezikiel">Ezikiel</option>
+				<option value="Chalupa">Chalupa</option>
+			</select>
+		</div>
+		<div class="form-group">
+			<label for="authEmail"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> When is it due?</label>
+			<input type="date" name="due">
+		</div>
+		<div class="form-group">
+			<label for="authPassword"><i class="fa fa-unlock-alt fa-lg" aria-hidden="true"></i> How much is it worth?</label>
+			<input type="number" name="Value">
+		</div>
+		<input class="btn btn-primary choreSubmit" type="submit" value="Add Chore">
+	</form>
+</div>
+<div class="choreList">
+	<div class="chore">
+		<p><span>Rake Yard - $5</span>Floyd
+		<input type="checkbox" name="vehicle" value="Bike">Completed</p>
+	</div>
+	<div class="chore">
+		<p><span>Sweep Kitchen - $1</span>Chalupa
+		<input type="checkbox" name="vehicle" value="Bike">Completed</p>
+	</div>
+	<div class="chore">
+		<p><span>Eliminate Neighbor - $10</span>Floyd
+		<input type="checkbox" name="vehicle" value="Bike">Completed</p>
+	</div>
+</div>
+<div class="kidList">
+	Kids
+	<div class=addKid>
+		Add Kid
+	</div>
+</div>

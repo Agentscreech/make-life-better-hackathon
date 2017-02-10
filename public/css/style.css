@@ -1,0 +1,49 @@
+/* GLOBAL */
+body{
+	margin:  0 auto;
+	padding:  0;
+}
+/* INDEX */
+.landingLogin{
+	margin: o auto;
+	width: 33%;
+	border: 1px solid lightgrey;
+	border-radius: 25px;
+	padding: 10px;
+}
+.landingLogin span{
+	width: 100%;
+	display: block;
+	font-size: 150%;
+	padding: 10px;
+}
+
+/* SIGNUP VIEW */
+
+
+/* PARENT VIEW*/
+.addChore{
+	display: inline-block;
+	border:  1px solid lightgrey;
+	margin: 20px;
+	padding: 10px;
+	border-radius: 25px;
+}
+.addChore div{
+	margin: 10px;
+}
+.form-group{
+	display: inline-block;
+}
+#authName{
+	width: 80%;
+}
+.choreSubmit{
+	width: 90%;
+	margin: 10px;
+}
+.chore{
+	border:  1px solid lightgrey;
+	margin: 10px;
+	padding: 5px;
+}
