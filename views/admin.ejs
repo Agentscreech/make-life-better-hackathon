@@ -6,7 +6,7 @@
 			<label for="name"><i class="fa fa-user fa-lg" aria-hidden="true"></i> Whats the chore?</label>
 			<input id="name" class="formItem formText form-control" type="text" name="name">
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-5 addFeatures">
 		<div class="form-group">
 			<label for="childId" value="0"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i> Which child?
 			<select class="formItem" name='childId'>
@@ -51,39 +51,39 @@
 	<div class="done"><h3>Done:</h3>
 	<div class="chore">
 		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Walk Dog </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$5</span>
-		<input type="button" class="btn btn-defautl disabled col-xs-3 col-xs-offset-5 " value=" Approve ">
+		<input type="button" class="btn btn-defautl col-xs-3 col-xs-offset-5 " value=" Approve ">
 	</div>
 	<div class="chore finished">
 		<span class="col-xs-5 choreName"><i class="fa fa-trash-o fa-lg" aria-hidden="true"></i> Paint Barn </span><span class="col-xs-3  col-xs-offset-4 choreName">2/17/17</span><span class="col-xs-4 choreName">$10</span>
-		<input type="button" class="btn btn-primary disabled col-xs-3 col-xs-offset-5 " value=" Done! ">
+		<input type="button" class="btn disabled btn-primary col-xs-3 col-xs-offset-5 " value=" Done! ">
 	</div>
 	</div>
 
 <div class="addChore">
 	<form class="" action="admin/child/new" method="POST">
-		<div class="form-group" style='width:90%'>
-			<label for="name"><i class="fa fa-user fa-lg"></i>Child's name
-				<input type="text" name="name">
+		<div class="form-group col-md-5 " >
+			<label for="name"><span class="col-md-12"><i class="fa fa-user fa-lg"></i>Child's name
+				<input type="text" name="name"></span>
 			</label>
 		</div>
-		<div class="form-group" style='width:90%'>
-			<label for="username"><i class="fa fa-user fa-lg"></i>Child's Username
-				<input type="text" name="username">
+		<div class="form-group col-md-5" >
+			<label for="username"><span class="col-md-12"><i class="fa fa-user fa-lg"></i>Child's Username
+				<input type="text" name="username"></span>
 			</label>
 		</div>
-		<div class="form-group" style='width:90%'>
-			<label for="password"><i class="fa fa-user fa-lg"></i>Child's password
-				<input type="password" name="password">
+		<div class="form-group col-md-5" >
+			<label for="password"><span class="col-md-12"><i class="fa fa-user fa-lg"></i>Child's password
+				<input type="password" name="password"></span>
 			</label>
 		</div>
-		<div class="form-group" style='width:90%'>
-			<label for="bank"><i class="fa fa-user fa-lg"></i>Child's current bank
-				<input type="text" name="bank">
+		<div class="form-group col-md-5" >
+			<label for="bank"><span class="col-md-12"><i class="fa fa-user fa-lg"></i>Child's current bank
+				<input type="text" name="bank"></span>
 			</label>
 		</div>
-		<div class="form-group" style='width:90%'>
-			<label for="charity"><i class="fa fa-user fa-lg"></i>Child's charity
-				<input type="text" name="charity">
+		<div class="form-group  col-md-5" >
+			<label for="charity"><span class="col-md-6"><i class="fa fa-user fa-lg "></i>Child's charity</span>
+				<span class="col-md-6"><input type="text" name="charity"></span>
 			</label>
 		</div>
 		<input type="hidden" name="userId" value="<%=user.id%>">
