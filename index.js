@@ -44,13 +44,25 @@ app.get('/profile', isLoggedIn, function(req, res) {
       },
       include: [db.child, db.chore]
     }).then(function(user){
-      res.render('profile',{user:user});
+      console.log('user return', user);
+      if (user){
+        res.render('parent',{user:user});
+      } else {
+        db.child.find({
+          where: {
+            id: req.user.id
+          },
+          include: [db.chore]
+        }).then(function(child){
+          res.render('child', {child:child});
+        });
+      }
     });
 
 });
 
 app.use('/auth', require('./controllers/auth'));
-// app.use('/profile', require('./controllers/profile'));
+app.use('/parent', require('./controllers/parent'));
 
 
 

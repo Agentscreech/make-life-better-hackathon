@@ -30,13 +30,22 @@ router.post('/signup', function(req, res) {
   });
 });
 
-router.get('/login', function(req, res) {
-  res.render('auth/login');
+router.get('/loginParent', function(req, res) {
+  res.render('auth/loginParent');
+});
+router.get('/loginChild', function(req, res) {
+  res.render('auth/loginChild');
 });
 
-router.post('/login', passport.authenticate('local', {
-  successRedirect: '/profile',
-  failureRedirect: '/auth/login',
+router.post('/loginChild', passport.authenticate('local', {
+  successRedirect: '/child',
+  failureRedirect: '/auth/loginChild',
+  successFlash: 'Logged In!',
+  failureFlash: 'Invalid username and/or password'
+}));
+router.post('/loginParent', passport.authenticate('local', {
+  successRedirect: '/parent',
+  failureRedirect: '/auth/loginParent',
   successFlash: 'Logged In!',
   failureFlash: 'Invalid username and/or password'
 }));
