@@ -47,3 +47,12 @@ body{
 	margin: 10px;
 	padding: 5px;
 }
+.chore span {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.chore p input{
+}
+.choreComplete{
+		right: 10px;
+}
