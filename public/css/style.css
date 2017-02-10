@@ -3,6 +3,9 @@ body{
 	margin:  0 auto;
 	padding:  0;
 }
+h2{
+	margin:  0 auto;
+}
 /* INDEX */
 .landingLogin{
 	margin: o auto;
@@ -55,4 +58,67 @@ body{
 }
 .choreComplete{
 		right: 10px;
+}
+.fa-trash-o{
+	color: green;
+}
+/* KID VIEW */
+.bank{
+	display: inline-block;
+	width: 100%;
+	background: #FFFABA;
+}
+.bank div{
+	height: 100px;
+}
+.bank h2{
+	padding: 5px;
+}
+.bank h3{
+	margin-top: 0px;
+}
+.bank h4{
+	padding: 15%;
+	font-size: 200%;
+}
+.spending{
+	background: #ff9494;
+}
+.saving{
+	background: #99f09a;
+}
+.giving{
+	background: #e1b3f4;
+}
+.toDo{
+	margin-top: 40px;
+}
+.toDo div{
+		background: lightblue;
+		margin: 5px;
+}
+.chore{
+	display: inline-block;
+	width: 90%;
+}
+.choreName{
+	background: white;
+	font-size: 120%;
+	padding: 5px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+.done{
+	margin-top: 40px;
+}
+.done div{
+		background: lightgray;
+		margin: 5px;
+}
+.btn{
+	font-size: 120%;
+	font-weight: 500;
+}
+.finished{
+	background: PaleGreen !important; 
 }
