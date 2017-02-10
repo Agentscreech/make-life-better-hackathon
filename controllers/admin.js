@@ -49,11 +49,11 @@ router.post('/chore/new', isLoggedIn, function(req, res) {
     db.chore.create({
         name: req.body.name,
         value: req.body.value,
-        // isDone: req.body.isDone,
+        isDone: req.body.isDone,
         dueDate: req.body.dueDate,
-        // approved: req.body.approved,
-        // userId: req.body.userId,
-        // childId: req.body.childId
+        approved: req.body.approved,
+        userId: req.body.userId,
+        childId: req.body.childId
     }).then(function() {
         req.flash('success', 'Chore Added');
         res.redirect('/admin');
