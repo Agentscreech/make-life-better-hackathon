@@ -37,7 +37,8 @@ router.post('/child/new', isLoggedIn, function(req, res) {
         username: req.body.username,
         password: req.body.password,
         charity: req.body.charity,
-        bank: req.body.bank
+        bank: req.body.bank,
+        userId: req.body.userId
     }).then(function() {
         req.flash('success', 'Child Added');
         res.redirect('/admin');

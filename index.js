@@ -46,9 +46,9 @@ app.get('/admin', function  (req,res) {
   res.render('admin');
 });
 
-app.get('/user', function  (req,res) {
-  res.render('user');
-});
+// app.get('/user', function  (req,res) {
+//   res.render('user');
+// });
 
 var server = app.listen(process.env.PORT || 3000);
 

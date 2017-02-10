@@ -30,14 +30,16 @@ passport.use('admin', new LocalStrategy({
 }));
 
 passport.use('user', new LocalStrategy({
-  usernameField: 'email',
+  usernameField: 'username',
   passwordField: 'password'
-}, function(email, password, callback) {
+}, function(username, password, callback) {
+  console.log("password", password);
   db.child.find({
     where: {
-      email: email
+      username: username
     }
   }).then(function(user) {
+    console.log('user', user);
     if(!user || !user.validPassword(password)) {
       callback(null, false);
     } else {
