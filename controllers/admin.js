@@ -45,15 +45,15 @@ router.post('/child/new', isLoggedIn, function(req, res) {
 });
 
 router.post('/chore/new', isLoggedIn, function(req, res) {
-    console.log("req "+req+" res "+res);
+    console.log("req "+req.body+" res "+res.body);
     db.create.chore({
         name: req.body.name,
         value: req.body.value,
-        isDone: req.body.isDone,
+        // isDone: req.body.isDone,
         dueDate: req.body.dueDate,
-        approved: req.body.approved,
-        userId: req.body.userId,
-        childId: req.body.childId
+        // approved: req.body.approved,
+        // userId: req.body.userId,
+        // childId: req.body.childId
     }).then(function() {
         req.flash('success', 'Chore Added');
         res.redirect('/admin');
