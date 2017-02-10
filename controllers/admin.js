@@ -45,6 +45,7 @@ router.post('/child/new', isLoggedIn, function(req, res) {
 });
 
 router.post('/chore/new', isLoggedIn, function(req, res) {
+    console.log("req "+req+" res "+res);
     db.create.chore({
         name: req.body.name,
         value: req.body.value,
