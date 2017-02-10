@@ -81,9 +81,13 @@
 				<input type="text" name="bank"></span>
 			</label>
 		</div>
-		<div class="form-group  col-md-5" >
-			<label for="charity"><span class="col-md-6"><i class="fa fa-user fa-lg "></i>Child's charity</span>
-				<span class="col-md-6"><input type="text" name="charity"></span>
+
+		<div class="form-group" style='width:90%'>
+			<label for="charity"><i class="fa fa-user fa-lg"></i>Child's charity
+				<select id='charities' name="charity">
+					
+				</select>
+
 			</label>
 		</div>
 		<input type="hidden" name="userId" value="<%=user.id%>">
